@@ -1,0 +1,9 @@
+/mvnw text eol=lf
+*.cmd text eol=crlf
+
+# Tự động xử lý xuống dòng cho tất cả các file text
+* text=auto
+
+# Cố định kiểu xuống dòng cho các file script (như mvnw) là LF
+mvnw text eol=lf
+*.sh text eol=lf
