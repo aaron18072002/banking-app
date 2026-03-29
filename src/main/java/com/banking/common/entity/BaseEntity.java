@@ -1,4 +1,4 @@
-package com.banking.common.identity.entity;
+package com.banking.common.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.MappedSuperclass;

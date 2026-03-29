@@ -1,6 +1,6 @@
 package com.banking.modules.identity.entity;
 
-import com.banking.common.identity.entity.BaseEntity;
+import com.banking.common.entity.BaseEntity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

@@ -23,6 +23,10 @@ public class ApiResponse<T> {
 
     private Object errors;
 
+    // When using @Builder, Lombok ignores inline field initializations and
+    //      defaults it to NULL, 0 or false
+    // @Builder.Default forces Lombok to use inline initializations as a fallback
+    //      if the field is skipped during the builder chain initialization.
     @Builder.Default
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:dd")
     private LocalDateTime timestamp = LocalDateTime.now();
