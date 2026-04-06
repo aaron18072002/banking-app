@@ -1,4 +1,4 @@
-package com.banking.modules.identity.config;
+package com.banking.modules.common.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
