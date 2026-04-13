@@ -1,6 +1,8 @@
 package com.banking.modules.identity.controller;
 
 import com.banking.common.response.ApiResponse;
+import com.banking.modules.identity.dto.LoginRequest;
+import com.banking.modules.identity.dto.LoginResponse;
 import com.banking.modules.identity.dto.RegisterRequest;
 import com.banking.modules.identity.service.AuthService;
 import jakarta.validation.Valid;
@@ -33,6 +35,19 @@ public class AuthController {
 
         return new ResponseEntity<>(response, HttpStatus.CREATED);
 
+    }
+
+    @PostMapping("/login")
+    public ResponseEntity<ApiResponse<LoginResponse>> login(
+            @Valid @RequestBody LoginRequest loginRequest) {
+        LoginResponse loginResponse = this.authService.login(loginRequest);
+        ApiResponse<LoginResponse> response = ApiResponse.success(
+                HttpStatus.OK.value(),
+                "Login successfully",
+                loginResponse
+        );
+
+        return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
 }
